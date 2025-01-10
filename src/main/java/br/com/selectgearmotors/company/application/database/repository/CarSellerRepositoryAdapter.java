@@ -40,7 +40,7 @@ public class CarSellerRepositoryAdapter implements CarSellerRepositoryPort {
 
             if (companyId != null) {
                 Optional<CompanyEntity> companyLegalEntityById = companyRepository.findById(companyId);
-                if (!companyLegalEntityById.isPresent()) {
+                if (companyLegalEntityById.isEmpty()) {
                     throw new ResourceFoundException("Cliente já cadastrado");
                 }
                 carSellerEntity.setCompanyEntity(companyLegalEntityById.get());
