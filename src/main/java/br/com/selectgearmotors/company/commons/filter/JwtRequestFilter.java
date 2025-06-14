@@ -59,6 +59,8 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                     authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
 
                     // Define a autenticação no SecurityContext para ser usada nas requisições
+                    String tokenSession = decodedJWT.getToken();
+                    log.info("Token JWT decodificado: {}", tokenSession);
                     SecurityContextHolder.getContext().setAuthentication(authenticationToken);
                 }
             } catch (JWTDecodeException e) {

@@ -115,6 +115,12 @@ public class CarSellerEntity extends AuditDomain {
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private MediaEntity mediaEntity;
 
+    @Schema(description = "description of the Company.",
+            example = "V$")
+    @Size(min = 0, max = 255)
+    @Column(name = "address", length = 255)
+    private String address;
+
     public void update(Long id, CarSellerEntity carSellerEntity) {
         this.id = id;
         this.code = carSellerEntity.getCode();
@@ -129,5 +135,6 @@ public class CarSellerEntity extends AuditDomain {
         this.birthDate = carSellerEntity.getBirthDate();
         this.companyEntity = carSellerEntity.getCompanyEntity();
         this.mediaEntity = carSellerEntity.getMediaEntity();
+        this.address = carSellerEntity.getAddress();
     }
 }

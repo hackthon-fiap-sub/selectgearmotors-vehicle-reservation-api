@@ -16,6 +16,7 @@ public interface CarSellerMapper {
     @Mapping(source = "email", target = "email")
     @Mapping(source = "code", target = "code")
     @Mapping(source = "mobile", target = "mobile")
+    @Mapping(source = "address", target = "address")
     @Mapping(source = "documentId", target = "documentId")
     @Mapping(source = "companyId", target = "companyEntity.id")
     @Mapping(source = "socialId", target = "socialId", qualifiedByName = "formatSocialId")
@@ -28,6 +29,7 @@ public interface CarSellerMapper {
 
     @InheritInverseConfiguration
     @Mapping(target = "id", source = "id")
+    @Mapping(source = "address", target = "address")
     @Mapping(target = "companyId", source = "companyEntity.id")
     @Mapping(target = "mediaId", source = "mediaEntity.id")
     CarSeller fromEntityToModel(CarSellerEntity carSellerEntity);

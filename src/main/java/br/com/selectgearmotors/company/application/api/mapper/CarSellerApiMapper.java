@@ -22,6 +22,7 @@ public interface CarSellerApiMapper {
     @Mapping(source = "documentDistrict", target = "documentDistrict")
     @Mapping(source = "documentDispatchDate", target = "documentDispatchDate")
     @Mapping(source = "birthDate", target = "birthDate")
+    @Mapping(source = "address", target = "address")
     @Mapping(source = "mediaId ", target = "mediaId")
     @Mapping(source = "companyId", target = "companyId")
     CarSeller fromRequest(CarSellerRequest request);

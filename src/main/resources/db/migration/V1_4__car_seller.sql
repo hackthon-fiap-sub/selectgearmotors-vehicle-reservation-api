@@ -10,6 +10,7 @@ create table company.tb_car_seller (
     document_district varchar(255),
     document_dispatch_date date,
     birth_date date,
+    address varchar(255) not null,
     company_id bigint not null,
     media_id bigint not null,
     create_by varchar(255) not null,

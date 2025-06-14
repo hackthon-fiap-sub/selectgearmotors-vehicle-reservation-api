@@ -30,6 +30,7 @@ public interface CompanyApiMapper {
     @Mapping(target = "id", source = "id")
     @Mapping(target = "code", source = "code")
     @Mapping(target = "mobile", source = "mobile")
+    @Mapping(source = "address", target = "address")
     @Mapping(target = "companyTypeId", source = "companyTypeId")
     @Mapping(target = "companyId", source = "companyId", qualifiedByName = "revertCompanyId")
     @Mapping(target = "mediaId", source = "mediaId")

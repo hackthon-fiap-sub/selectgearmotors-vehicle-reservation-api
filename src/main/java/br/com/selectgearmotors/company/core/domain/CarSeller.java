@@ -94,6 +94,10 @@ public class CarSeller implements Serializable {
             example = "1", ref = "ClientCategoryEntity")
     private Long mediaId;
 
+    @Schema(description = "name of the Product.",
+            example = "V$")
+    private String address;
+
     public void update(Long id, CarSeller carSeller) {
         this.id = id;
         this.name = carSeller.getName();
@@ -108,5 +112,6 @@ public class CarSeller implements Serializable {
         this.birthDate = carSeller.getBirthDate();
         this.companyId = carSeller.getCompanyId();
         this.mediaId = carSeller.getMediaId();
+        this.address = carSeller.getAddress();
     }
 }

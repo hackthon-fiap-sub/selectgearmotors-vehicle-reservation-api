@@ -102,4 +102,9 @@ public class CarSellerResponse implements Serializable {
     @Schema(description = "Client of the User.",
             example = "1", ref = "ClientCategoryEntity")
     private Long mediaId;
+
+    @Schema(description = "description of the Company.",
+            example = "V$")
+    @Size(min = 0, max = 255)
+    private String address;
 }

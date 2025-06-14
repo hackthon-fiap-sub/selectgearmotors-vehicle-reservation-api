@@ -18,8 +18,8 @@ public class CarSellerEntityTest {
         CompanyEntity companyEntity2 = new CompanyEntity();
         MediaEntity mediaEntity = new MediaEntity();
 
-        CarSellerEntity originalEntity = new CarSellerEntity(1L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929","123.456.789-00", LocalDate.now(), "SP 9999999", "SP",  LocalDate.now(),  LocalDate.now(), companyEntity1, mediaEntity);
-        CarSellerEntity updatedEntity = new CarSellerEntity(2L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929", "123.456.789-00", LocalDate.now(), "SP 9999999", "SP",  LocalDate.now(),  LocalDate.now(), companyEntity2, mediaEntity);
+        CarSellerEntity originalEntity = new CarSellerEntity(1L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929","123.456.789-00", LocalDate.now(), "SP 9999999", "SP",  LocalDate.now(),  LocalDate.now(), companyEntity1, mediaEntity, "AVa. snsosos, 122");
+        CarSellerEntity updatedEntity = new CarSellerEntity(2L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929", "123.456.789-00", LocalDate.now(), "SP 9999999", "SP",  LocalDate.now(),  LocalDate.now(), companyEntity2, mediaEntity, "AVa. snsosos, 122");
 
         // Act
         originalEntity.update(2L, updatedEntity);

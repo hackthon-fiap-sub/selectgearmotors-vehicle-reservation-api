@@ -65,4 +65,9 @@ public class CompanyResponse implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = Constants.BRAZILIAN_DATE_WITHOUT_TOME)
     @DateTimeFormat(pattern = Constants.BRAZILIAN_DATE_WITHOUT_TOME)
     private LocalDate foundationDate; //Data de Fundação
+
+    @Schema(description = "description of the Company.",
+            example = "V$")
+    @Size(min = 0, max = 255)
+    private String address;
 }

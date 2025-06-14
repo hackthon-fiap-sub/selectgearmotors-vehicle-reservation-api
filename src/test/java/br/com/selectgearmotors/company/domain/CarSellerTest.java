@@ -14,7 +14,7 @@ public class CarSellerTest {
     @Test
     public void testConstructor() {
         // Arrange & Act
-        CarSeller entity = new CarSeller(1L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929", "123.456.789-00", LocalDate.now(), "SP 9999999", "SP", LocalDate.now(),  LocalDate.now(), 1L, 1L);
+        CarSeller entity = new CarSeller(1L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929", "123.456.789-00", LocalDate.now(), "SP 9999999", "SP", LocalDate.now(),  LocalDate.now(), 1L, 1L, "AVa. snsosos, 122");
 
         // Assert
         assertEquals(1L, entity.getId());
@@ -41,7 +41,7 @@ public class CarSellerTest {
     @Disabled
     public void testToString() {
         // Arrange
-        CarSeller entity = new CarSeller(1L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929", "123.456.789-00", LocalDate.now(), "SP 9999999", "SP", LocalDate.now(),  LocalDate.now(), 1L, 1L);
+        CarSeller entity = new CarSeller(1L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929", "123.456.789-00", LocalDate.now(), "SP 9999999", "SP", LocalDate.now(),  LocalDate.now(), 1L, 1L, "AVa. snsosos, 122");
 
         // Act
         String toString = entity.toString();
@@ -57,8 +57,8 @@ public class CarSellerTest {
     @Disabled
     public void testHashCode() {
         // Arrange
-        CarSeller entity1 = new CarSeller(1L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929","123.456.789-00", LocalDate.now(), "SP 9999999", "SP", LocalDate.now(),  LocalDate.now(), 1L, 1L);
-        CarSeller entity2 = new CarSeller(1L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929","123.456.789-00", LocalDate.now(), "SP 9999999", "SP", LocalDate.now(),  LocalDate.now(), 1L, 1L);
+        CarSeller entity1 = new CarSeller(1L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929","123.456.789-00", LocalDate.now(), "SP 9999999", "SP", LocalDate.now(),  LocalDate.now(), 1L, 1L, "AVa. snsosos, 122");
+        CarSeller entity2 = new CarSeller(1L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929","123.456.789-00", LocalDate.now(), "SP 9999999", "SP", LocalDate.now(),  LocalDate.now(), 1L, 1L, "AVa. snsosos, 122");
 
         // Act & Assert
         assertEquals(entity1.hashCode(), entity2.hashCode());
@@ -67,9 +67,9 @@ public class CarSellerTest {
     @Disabled
     public void testEquals() {
         // Arrange
-        CarSeller entity1 = new CarSeller(1L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929","123.456.789-00", LocalDate.now(), "SP 9999999", "SP", LocalDate.now(),  LocalDate.now(), 1L, 1L);
-        CarSeller entity2 = new CarSeller(1L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929","123.456.789-00", LocalDate.now(), "SP 9999999", "SP", LocalDate.now(),  LocalDate.now(), 1L, 1L);
-        CarSeller entity3 = new CarSeller(2L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929","123.456.789-00", LocalDate.now(), "SP 9999999", "SP", LocalDate.now(),  LocalDate.now(), 2L, 1L);
+        CarSeller entity1 = new CarSeller(1L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929","123.456.789-00", LocalDate.now(), "SP 9999999", "SP", LocalDate.now(),  LocalDate.now(), 1L, 1L, "AVa. snsosos, 122");
+        CarSeller entity2 = new CarSeller(1L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929","123.456.789-00", LocalDate.now(), "SP 9999999", "SP", LocalDate.now(),  LocalDate.now(), 1L, 1L, "AVa. snsosos, 122");
+        CarSeller entity3 = new CarSeller(2L, "Carlos", "carlos@localhost", "OSKSIEEIEIEIE", "(34) 99192-9929","123.456.789-00", LocalDate.now(), "SP 9999999", "SP", LocalDate.now(),  LocalDate.now(), 2L, 1L,"AVa. snsosos, 122");
 
         // Act & Assert
         assertEquals(entity1, entity2);
